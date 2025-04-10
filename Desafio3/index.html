@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Formulário de Inscrição</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Botão Voltar -->
+        <a href="indexprincipal.html" class="botao-voltar">Voltar</a>
+
+        <div class="formulario">
+            <h1>Formulário de inscrição</h1>
+            <p>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
+
+            <form id="formulario-inscricao">
+                <!-- Seção de Informações do Participante -->
+                <fieldset>
+                    <h3>Informações do participante</h3>
+
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Ayrton Antunes Fernandes Mesquita" required>
+
+                    <label for="data-nascimento">Data de nascimento</label>
+                    <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="Ex: 123.456.789-00" required>
+                    <span class="mensagem-erro" id="erro-cpf">Insira um CPF válido</span>
+
+                    <label for="sexo">Sexo</label>
+                    <select id="sexo" name="sexo">
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: example@gmail.com" required>
+                    <span class="mensagem-erro" id="erro-email">Insira um e-mail válido</span>
+
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" name="telefone" placeholder="Ex: (98) 4002-8922" required>
+
+                    <!-- Upload do Documento de Identidade -->
+                    <label for="documento">Documento de Identidade</label>
+                    <div class="upload-arquivo">
+                        <div class="logo-upload">
+                            <img src="img/cloud-upload.png" alt="Ícone de upload">
+                        </div>
+                        <span>Clique aqui para selecionar o arquivo</span>
+                        <input type="file" id="documento" name="documento" required>
+                    </div>
+                </fieldset>
+
+                <!-- Seção de Endereço Residencial -->
+                <fieldset>
+                    <h3>Endereço residencial</h3>
+
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" placeholder="653000-00" required>
+                    <span class="mensagem-erro" id="erro-cep">Insira um CEP válido</span>
+
+                    <div class="grupo-endereco">
+                        <div>
+                            <label for="rua">Rua</label>
+                            <input type="text" id="rua" name="rua" placeholder="Rua 1" required>
+                        </div>
+                        <div>
+                            <label for="numero">Número</label>
+                            <input type="text" id="numero" name="numero" placeholder="10" required>
+                        </div>
+                    </div>
+
+                    <div class="grupo-endereco">
+                        <div>
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="São Luís" required>
+                        </div>
+                        <div>
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" name="estado" placeholder="MA" required>
+                        </div>
+                    </div>
+
+                    <!-- Upload do Comprovante de Residência -->
+                    <label for="comprovante">Comprovante de residência</label>
+                    <div class="upload-arquivo">
+                        <div class="logo-upload">
+                            <img src="img/cloud-upload.png" alt="Ícone de upload">
+                        </div>
+                        <span>Clique aqui para selecionar o arquivo</span>
+                        <input type="file" id="comprovante" name="comprovante" required>
+                    </div>
+                </fieldset>
+
+                <!-- Seção de Trilhas de Aprendizagem -->
+                <fieldset>
+                    <h3>Trilhas de aprendizagem</h3>
+                    <p>Selecione apenas uma trilha</p>
+                    <div class="trilhas">
+                        <label class="opcao-trilha">
+                            <input type="radio" name="trilha" value="front-end" required>
+                            <div class="imagem-trilha">
+                                <img src="img/front-end.png" alt="Imagem de inscrição">
+                            </div>
+                            <h4>Programação Front-end</h4>
+                        </label>
+                        <label class="opcao-trilha">
+                            <input type="radio" name="trilha" value="back-end" required>
+                            <div class="imagem-trilha">
+                                <img src="img/back-end.png" alt="Imagem de inscrição">
+                            </div>
+                            <span>Programação Back-end</span>
+                        </label>
+                        <label class="opcao-trilha">
+                            <input type="radio" name="trilha" value="jogos" required>
+                            <div class="imagem-trilha">
+                                <img src="img/jogos.png" alt="Imagem de inscrição">
+                            </div>
+                            <span>Programação de Jogos</span>
+                        </label>
+                        <label class="opcao-trilha">
+                            <input type="radio" name="trilha" value="design" required>
+                            <div class="imagem-trilha">
+                                <img src="img/ux.png" alt="Imagem de inscrição">
+                            </div>
+                            <span>Design e Experiência</span>
+                        </label>
+                        <label class="opcao-trilha">
+                            <input type="radio" name="trilha" value="dados" required>
+                            <div class="imagem-trilha">
+                                <img src="img/Frame 48095973.png" alt="Imagem de inscrição">
+                            </div>
+                            <span>Ciência de Dados</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Seção de Acesso do Usuário -->
+                <fieldset>
+                    <h3>Credenciais de Acesso</h3>
+
+                    <label for="usuario">ID do Usuário</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Escolha um nome de usuário" required>
+
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Crie uma senha segura" required>
+                </fieldset>
+
+
+                <!-- Termos e Condições -->
+                <div class="termos-condicoes">
+                    <label class="checkbox-termos">
+                        <input type="checkbox" id="termos" required>
+                        Declaro que li e concordo com os <a href="#">Termos e Condições</a> e
+                        com a <a href="#">Política de Privacidade</a>.
+                    </label>
+                </div>
+
+                <!-- Botões do Formulário -->
+                <div class="botoes-formulario">
+                    <button type="button" class="botao-cancelar">Cancelar</button>
+                    <button type="button" class="botao-salvar" onclick="salvarDados()">Salvar Temporariamente</button>
+                    <button type="submit" class="botao-inscricao">Fazer Inscrição</button>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- Imagens Lateral -->
+        <div class="lateral-imagem">
+            <img src="img/Ilustration.png" alt="Imagem de inscrição">
+            <div class="logo-trilhas">
+                <img src="img/logo-trilhas-inova.png" alt="Logo Trilhas">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

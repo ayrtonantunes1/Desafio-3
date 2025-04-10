@@ -1,0 +1,263 @@
+
+/* Remove margens, paddings padrão e define box-sizing para todos elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Configurações gerais do body */
+body {
+    width: 100vw; /* Largura total da viewport */
+    height: 100vh; /* Altura total da viewport */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente*/
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza os itens em coluna*/
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse */
+    background: url('img/Fundo.png') no-repeat center center;
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+    position: relative; /* Permite posicionamento absoluto dos filhos */
+}
+
+/* Container das barras superiores */
+.barras-superiores {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Barra branca superior */
+.barras-superiores .branca {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%; /* Largura da barra */
+    z-index: 1; /* Camada de posicionamento */
+}
+
+/* Barra roxa superior */
+.barras-superiores .roxa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    z-index: 2; /* Fica acima da barra branca */
+}
+
+/* Container principal do login */
+.container-login {
+    display: flex;
+    align-items: center;
+    z-index: 10; /* Garante que fique acima de outros elementos */
+}
+
+/* Box que centraliza o conteúdo */
+.container-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* Estilização da logo */
+.logo-login img {
+    width: 200px;
+    margin-bottom: 20px; /* Espaçamento abaixo da logo */
+}
+
+/* Cartão/caixa do formulário de login */
+.cartao-login {
+    background-color: white;
+    padding: 40px;
+    border-radius: 16px; /* Bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center;
+    min-width: 320px; /* Largura mínima */
+}
+
+/* Título "Login" */
+.cartao-login h2 {
+    margin-bottom: 24px;
+    font-size: 28px;
+    color: #5A189A; /* Cor roxa */
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Grupo de inputs (label + campo) */
+.grupo-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px; /* Espaço entre os campos */
+    position: relative; /* Permite posicionamento absoluto dos filhos */
+}
+
+/* Estilo dos campos de input */
+.grupo-input input {
+    flex: 1; /* Ocupa todo espaço disponível */
+    padding: 10px 12px;
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Ícone de olho para mostrar/esconder senha */
+.grupo-senha .icone-olho {
+    position: absolute;
+    right: 12px; /* Distância da borda direita */
+    cursor: pointer; /* Muda cursor para pointer */
+    width: 24px;
+    height: 24px;
+}
+
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #5A189A; /* Cor roxa */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Transição suave */
+}
+
+/* Efeito hover do botão */
+button[type="submit"]:hover {
+    background-color: #7B2CBF; /* Roxo mais claro */
+}
+
+/* Link de registro */
+
+.link-registro {
+    margin-top: 15px;
+    font-family: 'TT Octosquares Trial Variable', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Estilo do link */
+.link-registro a {
+    color: #5A189A;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* Efeito hover do link */
+.link-registro a:hover {
+    text-decoration: underline;
+}
+
+
+/* Equação "Trilhas = Inovação" */
+.equacao {
+    position: absolute;
+    top: 50px;
+    right: 200px;
+}
+
+.equacao img {
+    width: 300px;
+}
+
+/* Barras decorativas inferiores */
+.barras-inferiores {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+
+/* Barra branca inferior */
+.barras-inferiores .branca {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    z-index: 1;
+}
+
+/* Barra roxa inferior */
+.barras-inferiores .roxa {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    z-index: 2;
+}
+
+/* Ícone de controle de jogo decorativo */
+.controle-jogo {
+    position: absolute;
+    bottom: 100px;
+    left: 200px;
+    text-align: center;
+}
+
+.controle-jogo img {
+    width: 160px;
+}
+
+
+/* MEDIA PARA RESPONSIVIDADE */
+
+/* Dispositivos médios (tablets) */
+@media (max-width: 768px) {
+    .cartao-login {
+        padding: 30px 20px;
+        min-width: unset; /* Remove largura mínima */
+        max-width: 90%; /* Limita largura máxima */
+    }
+
+    .logo-login img {
+        width: 160px; /* Reduz tamanho da logo */
+    }
+
+    /* Reposiciona equação */
+    .equacao {
+        top: 20px;
+        right: 20px;
+    }
+
+    .equacao img {
+        width: 220px; /* Reduz tamanho */
+    }
+
+    /* Reposiciona controle de jogo */
+    .controle-jogo {
+        bottom: 40px;
+        left: 20px;
+    }
+
+    .controle-jogo img {
+        width: 100px; /* Reduz tamanho */
+    }
+
+    /* Ajusta largura das barras */
+    .barras-superiores .branca,
+    .barras-superiores .roxa,
+    .barras-inferiores .branca,
+    .barras-inferiores .roxa {
+        width: 60%;
+    }
+}
+
+/* Dispositivos pequenos (celulares) */
+@media (max-width: 480px) {
+    /* Reduz tamanho do título */
+    .cartao-login h2 {
+        font-size: 22px;
+    }
+
+    /* Reduz ainda mais a equação */
+    .equacao img {
+        width: 180px;
+    }
+}

@@ -1,0 +1,294 @@
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: 'Poppins', sans-serif; /* Define a fonte do corpo da página */
+    background-color: #f9f9f9; /* Define a cor de fundo do corpo */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    font-size: 16px; /* Tamanho de fonte padrão para o corpo */
+    display: flex; /* Usa flex para alinhar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    min-height: 100vh; /* Define a altura mínima da página */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Estilo para o botão Voltar */
+.botao-voltar {
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    top: 40px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    font-family: 'TT Octosquares Trial Variable', sans-serif; /* Define a fonte do botão */
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    background-color: #2135A6; /* Cor de fundo do botão */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 30px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+    z-index: 10; /* Garante que o botão fique acima de outros elementos */
+}
+
+/* Container principal */
+.container {
+    position: relative; /* Define o posicionamento relativo para elementos filhos absolutos */
+    display: flex; /* Usa flexbox para organizar o layout */
+    width: 90%; /* Ocupa 90% da largura disponível */
+    max-width: 1200px; /* Define a largura máxima do container */
+    background: #fff; /* Cor de fundo do container */
+    padding: 70px 20px 20px; /* Espaçamento interno (topo, laterais, inferior) */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do container */
+}
+
+/* Estilos para o formulário */
+.formulario {
+    width: 50%; /* Define a largura do formulário */
+    padding-right: 20px; /* Espaçamento à direita */
+}
+
+/* Estilos para a imagem lateral */
+.lateral-imagem {
+    width: 50%; /* Define a largura da imagem lateral */
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    background-color: #2135A6; /* Cor de fundo da imagem lateral */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.lateral-imagem img {
+    max-width: 100%; /* Define a largura máxima da imagem */
+}
+
+/* Estilos para a logo do Trilhas */
+.logo-trilhas {
+    margin-top: 20px; /* Margem superior */
+    text-align: center; /* Centraliza o texto */
+}
+
+.logo-trilhas img {
+    width: 100%; /* Largura máxima da logo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos para os campos do formulário */
+fieldset {
+    border: none; /* Remove a borda padrão */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+label {
+    display: block; /* Faz o label ocupar a linha inteira */
+    margin-top: 15px; /* Margem superior */
+    font-weight: bold; /* Texto em negrito */
+    color: #57534E; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo padrão para os campos de entrada */
+input, select {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #D6D3D1; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    outline: none; /* Remove o contorno ao focar */
+    color: #57534E; /* Cor do texto */
+    transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+}
+
+/* Estilos para o upload de arquivos */
+.upload-arquivo {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+    padding: 20px; /* Espaçamento interno */
+    border: 2px dashed #D6D3D1; /* Borda tracejada */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: #f9f9f9; /* Cor de fundo */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.upload-arquivo:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+.logo-upload img {
+    width: 50px; /* Largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.upload-arquivo span {
+    color: #666; /* Cor do texto */
+    font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Estilos para os grupos de endereço */
+.grupo-endereco {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin-bottom: 15px; /* Margem inferior */
+}
+
+.grupo-endereco div {
+    flex: 1; /* Distribui o espaço igualmente */
+}
+
+/* Estilos para as trilhas de aprendizagem */
+.trilhas {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+.opcao-trilha {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    background: #ffffff; /* Cor de fundo */
+    border: 1px solid #D6D3D1; /* Borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    width: calc(33% - 20px); /* Largura do item */
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+    position: relative; /* Posicionamento relativo */
+}
+
+.opcao-trilha:hover {
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Sombra ao passar o mouse */
+}
+
+.opcao-trilha img {
+    width: 100%; /* Largura total */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+.opcao-trilha h4, .opcao-trilha span {
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    margin: 0; /* Remove margens */
+}
+
+/* Estilo personalizado para o radio button */
+.opcao-trilha input[type="radio"] {
+    appearance: none; /* Remove o estilo padrão */
+    width: 16px; /* Largura */
+    height: 16px; /* Altura */
+    border: 2px solid #D6D3D1; /* Borda */
+    border-radius: 50%; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    position: absolute; /* Posicionamento absoluto */
+    top: 10px; /* Distância do topo */
+    left: 10px; /* Distância da esquerda */
+    transition: border-color 0.3s, background-color 0.3s; /* Transições suaves */
+}
+
+.opcao-trilha input[type="radio"]:checked {
+    border-color: #f7f7f7; /* Cor da borda quando selecionado */
+    background-color: #E43412; /* Cor de fundo quando selecionado */
+}
+
+.mensagem-erro {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 4px;
+}
+
+  
+
+/* Estilos para os botões */
+.botoes-formulario {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin-top: 20px; /* Margem superior */
+}
+
+.botoes-formulario button {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Cursor de ponteiro */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+.botoes-formulario button:hover {
+    transform: translateY(-3px); /* Efeito de levantar ao passar o mouse */
+}
+
+.botao-salvar {
+    background-color: #2135A6;
+    color: #fff;
+}
+
+.botao-salvar:hover {
+    background-color: #1a2b87;
+}
+
+
+/* Estilo específico para o botão Cancelar */
+.botao-cancelar {
+    background-color: #fff; /* Cor de fundo */
+    color: #E43412; /* Cor do texto */
+    border: 2px solid #E43412; /* Borda */
+}
+
+.botao-cancelar:hover {
+    background-color: #f8f8f8; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo específico para o botão Fazer Inscrição */
+.botao-inscricao {
+    background-color: #E43412; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+}
+
+.botao-inscricao:hover {
+    background-color: #c43019; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para os links de termos e condições */
+.checkbox-termos {
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+    font-size: 14px; /* Tamanho da fonte */
+    color: #57534E; /* Cor do texto */
+    margin-top: 20px; /* Margem superior */
+}
+
+.checkbox-termos input[type="checkbox"] {
+    width: 16px; /* Largura */
+    height: 16px; /* Altura */
+    border: 2px solid #D6D3D1; /* Borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s, border-color 0.3s; /* Transições suaves */
+}
+
+.checkbox-termos input[type="checkbox"]:checked {
+    background-color: #E43412; /* Cor de fundo quando selecionado */
+    border-color: #E43412; /* Cor da borda quando selecionado */
+}
+
+.checkbox-termos a {
+    color: #E43412; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Texto em negrito */
+}
+
+.checkbox-termos a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+

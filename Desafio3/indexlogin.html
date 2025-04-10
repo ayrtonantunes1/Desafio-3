@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Trilhas Login</title>
+    <link rel="stylesheet" href="styles_login.css">
+</head>
+<body>
+
+    <!-- Barras superiores -->
+    <div class="barras-superiores">
+        <img src="img/trilhas branco encima.png" alt="Barra branca superior" class="barra branca">
+        <img src="img/trilhas roxo encima.png" alt="Barra roxa superior" class="barra roxa">
+    </div>
+
+    <!-- Barras inferiores -->
+    <div class="barras-inferiores">
+        <img src="img/trilhas branco embaixo.png" alt="Barra branca inferior" class="barra branca">
+        <img src="img/trilhas roxo embaixo.png" alt="Barra roxa inferior" class="barra roxa">
+    </div>
+
+    <!-- Conteúdo central -->
+    <div class="conteudo-central">
+
+        <!-- Container central para logo + login -->
+        <div class="container-central">
+            <div class="logo-login">
+                <img src="img/logo-trilhas.png" alt="Logo Trilhas">
+            </div>
+
+            <div class="cartao-login">
+                <h2>Login</h2>
+
+                <div class="grupo-input">
+                    <input type="text" id="email" placeholder="Digite seu email">
+                </div>
+
+                <div class="grupo-input grupo-senha">
+                    <input type="password" id="senha" placeholder="Senha">
+                    <img src="img/olho.avif" alt="Ver senha" class="icone-olho" onclick="alternarSenha()">
+                </div>
+
+                <button type="submit" onclick="enviarLogin()">Entrar</button>
+                
+                <p class="link-registro">
+                    Ainda não tem uma conta?
+                    <a href="index.html">Registrar-se</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Equação no canto superior direito -->
+        <div class="equacao">
+            <img src="img/trilhas=inovação.png" alt="Equação Trilhas = Inovação">
+        </div>
+    </div>
+
+    <!-- Controle de jogo -->
+    <div class="controle-jogo">
+        <img src="img/controle.png" alt="Ícone controle de jogo">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

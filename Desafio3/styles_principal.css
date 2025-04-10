@@ -1,0 +1,235 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração do fundo */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: url('img/Fundo.png') no-repeat center center;
+    background-size: cover;
+    position: relative; /* Para posicionar elementos absolutos */
+}
+
+
+.barras-superiores {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa toda a largura */
+}
+
+/* Barra branca superior (atrás) */
+.barras-superiores .branca {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%; /* Ajuste de tamanho */
+    z-index: 1; /* Coloca atrás da barra roxa */
+}
+
+/* Barra roxa superior (na frente) */
+.barras-superiores .roxa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%; /* Ajuste de tamanho */
+    z-index: 2; /* Coloca na frente da barra branca */
+}
+
+/* CONTEÚDO CENTRAL */
+.conteudo-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center}
+
+/* Logo */
+.logo img {
+    width: 500px;
+}
+
+/* Título */
+.titulo {
+    font-family: 'TT Octosquares Trial Variable', sans-serif;
+    margin-top: 15px;
+    background-color: #2135A6;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+/* Estilo para o link de inscrição */
+.link-inscricao {
+    margin-top: 20px; /* Espaçamento acima do link */
+    font-family: 'TT Octosquares Trial Variable', sans-serif; /* Mesma fonte do título */
+    font-size: 24px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão */
+    background-color: #E43412; /* Cor de fundo */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 30px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.link-inscricao:hover {
+    background-color: #e4351291; /* Cor de fundo ao passar o mouse */
+}
+
+
+/* Equação */
+.equacao {
+    position: absolute;
+    top: 50px; /* Coloca no topo */
+    right: 200px; /* Encosta na direita */
+}
+
+.equacao img {
+    width: 300px;
+}
+
+
+/* Barras Inferiores */
+
+.barras-inferiores {
+    position: absolute;
+    bottom: 0;
+    right: 0; /* Alinha no canto inferior direito */
+    width: 100%; /* Ocupa toda a largura */
+}
+
+/* Barra branca inferior (atrás) */
+.barras-inferiores .branca {
+    position: absolute;
+    bottom: 0;
+    right: 0; /* Alinha no canto inferior direito */
+    width: 40%; /* Ajuste de tamanho */
+    z-index: 1; /* Coloca atrás da barra roxa */
+}
+
+/* Barra roxa inferior (na frente) */
+.barras-inferiores .roxa {
+    position: absolute;
+    bottom: 0;
+    right: 0; /* Alinha no canto inferior direito */
+    width: 40%; /* Ajuste de tamanho */
+    z-index: 2; /* Coloca na frente da barra branca */
+}
+
+
+/* Controle de jogo */
+.controle-jogo {
+    position: absolute;
+    bottom: 100px;
+    left: 200px;
+    text-align: center;
+}
+
+.controle-jogo img {
+    width: 160px;
+}
+
+/* Responsividade para tablets (≤ 991px) */
+@media (max-width: 991px) {
+    .logo img {
+        width: 350px;
+    }
+
+    .titulo {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .link-inscricao {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+
+    .equacao {
+        top: 30px;
+        right: 100px;
+    }
+
+    .equacao img {
+        width: 220px;
+    }
+
+    .controle-jogo {
+        bottom: 80px;
+        left: 100px;
+    }
+
+    .controle-jogo img {
+        width: 120px;
+    }
+
+    .barras-superiores .branca,
+    .barras-superiores .roxa,
+    .barras-inferiores .branca,
+    .barras-inferiores .roxa {
+        width: 60%;
+    }
+}
+
+
+/* Responsividade para celulares (≤ 600px) */
+@media (max-width: 600px) {
+    body {
+        background-position: center center;
+        background-size: cover;
+        padding: 20px;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+
+    .titulo {
+        font-size: 16px;
+        padding: 6px 14px;
+        margin-top: 10px;
+    }
+
+    .link-inscricao {
+        font-size: 18px;
+        padding: 8px 14px;
+        margin-top: 15px;
+    }
+
+    .equacao {
+        top: 20px;
+        right: 10px;
+    }
+
+    .equacao img {
+        width: 180px;
+    }
+
+    .controle-jogo {
+        bottom: 60px;
+        left: 20px;
+    }
+
+    .controle-jogo img {
+        width: 100px;
+    }
+
+    .barras-superiores .branca,
+    .barras-superiores .roxa,
+    .barras-inferiores .branca,
+    .barras-inferiores .roxa {
+        width: 80%;
+    }
+}
